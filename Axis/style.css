@@ -1,0 +1,196 @@
+/* Global Body Styling */
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Nunito, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+   
+  /* Background Image */
+  background: url(./assets/bgwave1.png), radial-gradient(circle at 5% 50%, #380C1F, #000622);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Header Section */
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  height: 104px;
+  text-align: center;
+}
+
+.content h1 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.content p {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+/* Image Containers */
+.img1, .img3, .img5 {
+  float: left;
+  margin-left: 120px;
+  width: 816px; /* ✅ Allow images to have their own width */
+  display: block;
+  margin-top: 40px;
+}
+
+.img2, .img4 {
+  float: right;
+  margin-right: 120px;
+  width: 816px; /* ✅ Allow images to have their own width */
+  display: block;
+  margin-top: 40px;
+}
+
+.img6 {
+  float: right;
+  margin-right: 120px;
+  margin-bottom: 40px;
+  width: 816px; /* ✅ Allow images to have their own width */
+  display: block;
+  margin-top: 40px;
+}
+
+/* Clear float to prevent overlapping */
+.img1::after, .img2::after, .img3::after, .img4::after, .img5::after, .img6::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Image Styling */
+.img1 img, .img2 img, .img3 img, .img4 img, .img5 img, .img6 img {
+  width: 100%; /* ✅ Default width */
+  max-width: 1000px; /* ✅ Limits max width */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 2px 3px 48px 9px rgba(27, 48, 94, 0.07);
+}
+
+/* Media Queries */
+
+/* For screens smaller than 1366px */
+@media screen and (max-width: 1365px) {
+  body {
+    font-size: 16px;
+  }
+
+  .content {
+    height: 90px;
+    gap: 24px;
+  }
+
+  .content h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .content p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  /* Adjust Image Layout */
+  .img1, .img3, .img5, .img2, .img4, .img6 {
+    float: none; /* ✅ Remove floating */
+    text-align: center; /* ✅ Center images */
+    margin: 10px auto;
+    width: 100%;
+  }
+
+  /* Adjust Image Sizes */
+  .img1 img, .img2 img, .img3 img, .img4 img, .img5 img, .img6 img {
+    width: 70%; /* ✅ Reduce image size */
+    max-width: 600px; /* ✅ Prevents excessive stretching */
+  }
+}
+
+/* For tablets (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .img1, .img2, .img3, .img4, .img5, .img6 {
+    float: none; /* ✅ Remove floating on smaller screens */
+    margin: 0 40px; /* ✅ Center images */
+    text-align: center;
+  }
+
+  .img1 img, .img2 img, .img3 img, .img4 img, .img5 img, .img6 img {
+    width: 80%; /* ✅ Make images larger */
+    max-width: 600px;
+  }
+}
+
+/* For mobile screens (768px and below) */
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+    gap: 0;
+    text-align: center;
+  }
+
+  .content h1 {
+    font-size: 20px;
+    
+    /* line-height: 38px; */
+  }
+
+  .content p {
+    font-size: 16px;
+    line-height: 0;
+  }
+
+  .img1, .img2, .img3, .img4, .img5, .img6 {
+    float: none; /* ✅ Remove floating */
+    width: 100%;
+    text-align: center;
+    margin: 16px 16px;
+  }
+
+  .img1 img, .img2 img, .img3 img, .img4 img, .img5 img, .img6 img {
+    width: 100%; /* ✅ Full width images */
+    max-width: 500px;
+  }
+}
+
+/* For screens larger than 1366px (e.g., Full HD 1920px) */
+@media screen and (min-width: 1367px) {
+  .img1, .img3, .img5 {
+    float: left;
+    margin-left: 240px;
+    width: 816px; /* ✅ Allow images to have their own width */
+    display: block;
+    margin-top: 40px;
+  }
+  
+  .img2, .img4 {
+    float: right;
+    margin-right: 240px;
+    width: 816px; /* ✅ Allow images to have their own width */
+    display: block;
+    margin-top: 40px;
+  }
+  
+  .img6 {
+    float: right;
+    margin-right: 240px;
+    margin-bottom: 40px;
+    width: 816px; /* ✅ Allow images to have their own width */
+    display: block;
+    margin-top: 40px;
+  }
